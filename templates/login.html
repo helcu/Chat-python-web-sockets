@@ -108,16 +108,13 @@
 <body>
 
 
-  <div class="col-md-6">
+  <div class="col-sm-6 col-sm-offset-3 form-box">
 
   <!-- Login Form -->
   <div class="nb-login">
   	<h3 class="scenter">UPCHAT</h3>
   	  <form action={{ url_for("login") }} method="post">
           <p style="color:red;">{{ error }}</p>
-  		<div class="form-group">
-  			<input type="email" class="form-control" placeholder="Enter Email">
-  		</div>
   		<div class="form-group">
 
         <label for="InputUser">User Name</label>
