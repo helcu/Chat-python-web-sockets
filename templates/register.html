@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
     <title>Example</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/bootstrap.min.css') }}" type="text/css"/>
@@ -9,26 +10,31 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="jumbotron">
-        <h1>Register</h1>
-        <p>Example Use Flask</p>
-    </div>
-    <form action={{ url_for("register") }} method="POST">
-        <p>{{ error }}</p>
-        <div class="form-group">
-            <label for="InputUser">User Name</label>
-            <input type="text" class="form-control" name="username" id="username" placeholder="username">
-        </div>
-        <div class="form-group">
-            <label for="InputPassword">Password</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="password">
-        </div>
-        <button type="submit" class="btn btn-default">Register</button>
-        <button type="button" onclick="location.replace('/login')" class="btn btn-link">LOGIN</button>
-    </form>
 
-</div>
+  <div class="col-md-6">
+
+  <!-- Login Form -->
+  <div class="nb-login">
+  	<h3 class="scenter">Sign In</h3>
+  	<form action={{ url_for("register") }} method="POST">
+  		<div class="form-group">
+        <label for="InputUser">User Name</label>
+        <input type="text" class="form-control" name="username" id="username" placeholder="username">
+  		</div>
+  		<div class="form-group">
+        <label for="InputPassword">Password</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="password">
+  		</div>
+      <button type="submit" class="btn btn-default">Register</button>
+      <button type="button" onclick="location.replace('/login')" class="btn btn-link">LOGIN</button>
+  	</form>
+  	<div class="center or">OR</div>
+
+  </div>
+
+  </div>
+
+
 <script src='{{ url_for('static', filename='javascripts/jquery.min.js') }}'></script>
 <script src='{{ url_for('static', filename='javascripts/bootstrap.min.js') }}'></script>
 <script src='{{ url_for('static', filename='plugins/jquery.validate/jquery.validate.min.js') }}'></script>
