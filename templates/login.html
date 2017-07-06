@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
     <title>Example</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/bootstrap.min.css') }}" type="text/css"/>
@@ -9,12 +10,16 @@
 
 </head>
 <body>
+  <div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
   <div class="top-content">
 
       <div class="inner-bg">
 <div class="container">
       <div class="row">
-                          <div class="col-sm-6 col-sm-offset-3 form-box">
+                          <div class="col-xs-12 col-sm-6 col-md-8">
                           	<div class="form-top">
                           		<div class="form-top-left">
                           			<h3>UPCHAT</h3>
